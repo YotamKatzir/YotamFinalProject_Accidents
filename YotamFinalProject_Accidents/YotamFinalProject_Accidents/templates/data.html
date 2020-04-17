@@ -1,0 +1,17 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{messege}}</h3>
+<img src="https://www.stylemotivation.com/wp-content/uploads/2018/10/29_p1_s_1.jpg" height="150"; width="370"><img src="https://www.stylemotivation.com/wp-content/uploads/2018/10/29_p1_s_1.jpg" height="150" ; width="370">
+<br /><br />
+<div class="row my-grid-borders">
+    <div class="col-md-5 my-grid-borders"><a href="{{ url_for('AccidentsData') }}">USA accidents dataset</a></div>
+    <div class="col-md-5 my-grid-borders">
+        <p>USA accidents data page</p>
+    </div>
+</div>
+
+
+{% endblock %}

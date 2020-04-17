@@ -1,0 +1,242 @@
+﻿{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<div class="row my-grid-borders">
+    <p> Here I am going to put a general explanation about the Data</p>
+</div>
+<div class="row my-grid-borders">
+    <h2>USA accidents data page</h2>
+</div>
+<div class="row my-grid-borders">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ID</td>
+                <td>This is a unique identifier of the accident record.</td>
+            </tr>
+            <tr>
+                <td>Source</td>
+                <td>Indicates source of the accident report.</td>
+            </tr>
+            <tr>
+                <td>TMC</td>
+                <td>A Traffic Message Channel code which provides more detailed description of the event.</td>
+            </tr>
+            <tr>
+                <td>Severity</td>
+                <td>Shows the severity of the accident in a range of 1 to 4</td>
+            </tr>
+            <tr>
+                <td>Start_Time</td>
+                <td>Shows start time of the accident in local time zone.</td>
+            </tr>
+            <tr>
+                <td>End_Time</td>
+                <td>Shows end time of the accident in local time zone.</td>
+            </tr>
+            <tr>
+                <td>Start_Lat</td>
+                <td>Shows latitude in GPS coordinate of the start point.</td>
+            </tr>
+            <tr>
+                <td>Start_Lng</td>
+                <td>Shows longitude in GPS coordinate of the start point.</td>
+            </tr>
+            <tr>
+                <td>End_Lat</td>
+                <td>Shows latitude in GPS coordinate of the end point.</td>
+            </tr>
+            <tr>
+                <td>End_Lng</td>
+                <td>Shows longitude in GPS coordinate of the end point.</td>
+            </tr>
+            <tr>
+                <td>Distance(mi)</td>
+                <td>The length of the road extent affected by the accident.</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>Shows natural language description of the accident.</td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>Shows the street number.</td>
+            </tr>
+            <tr>
+                <td>Street</td>
+                <td>Shows the street name.</td>
+            </tr>
+            <tr>
+                <td>Side</td>
+                <td>Shows the relative side of the street.</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>Shows the city.</td>
+            </tr>
+            <tr>
+                <td>County</td>
+                <td>Shows the county in.</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>Shows the state.</td>
+            </tr>
+            <tr>
+                <td>Zipcode</td>
+                <td>Shows the zipcode.</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>Shows the country</td>
+            </tr>
+            <tr>
+                <td>Timezone</td>
+                <td>Shows the timezone.</td>
+            </tr>
+            <tr>
+                <td>Airport_Code</td>
+                <td>Shows the nearest airport code.</td>
+            </tr>
+            <tr>
+                <td>Weather_Timestamp</td>
+                <td>Shows the weather timestamp at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Temperature(F)</td>
+                <td>Shows the air temperature in fahrenheit at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Wind_Chill(F)</td>
+                <td>Shows the wind temperature in fahrenheit at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Humidity(%)</td>
+                <td>Shows the humidity at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Pressure(in)</td>
+                <td>Shows the barometric pressure at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Visibility(mi)</td>
+                <td>Shows the visibility at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Wind_Direction</td>
+                <td>Shows the wind direction at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Wind_Speed(mph)</td>
+                <td>Shows the wind speed at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Precipitation(in)</td>
+                <td>Shows the precipitation at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Weather_Condition</td>
+                <td>Shows natural language description of the weather at the time of the accident.</td>
+            </tr>
+            <tr>
+                <td>Amenity</td>
+                <td>Shows whether or not there was amenity.</td>
+            </tr>
+            <tr>
+                <td>Bump</td>
+                <td>Shows whether or not there was a bump.</td>
+            </tr>
+            <tr>
+                <td>Crossing</td>
+                <td>Shows whether or not there was a crossing.</td>
+            </tr>
+            <tr>
+                <td>Give_Way</td>
+                <td>Shows whether or not there was &quot;give way&quot; sign.</td>
+            </tr>
+            <tr>
+                <td>Junction</td>
+                <td>Shows whether or not there was a junction.</td>
+            </tr>
+            <tr>
+                <td>No_Exit</td>
+                <td>Shows whether or not there was a &quot;no exit&quot; sign.</td>
+            </tr>
+            <tr>
+                <td>Railway</td>
+                <td>Shows whether or not there was a railway.</td>
+            </tr>
+            <tr>
+                <td>Roundabout</td>
+                <td>Shows whether or not there was a roundabout.</td>
+            </tr>
+            <tr>
+                <td>Station</td>
+                <td>Shows whether or not there was bus station.</td>
+            </tr>
+            <tr>
+                <td>Stop</td>
+                <td>Shows whether or not there was a &quot;stop&quot; sign.</td>
+            </tr>
+            <tr>
+                <td>Traffic_Calming</td>
+                <td>Shows whether or not the traffic was calmed.</td>
+            </tr>
+            <tr>
+                <td>Traffic_Signal</td>
+                <td>Shows whether or not there was a traffic signal.</td>
+            </tr>
+            <tr>
+                <td>Turning_Loop</td>
+                <td>Shows whether or not there was a turning loop.</td>
+            </tr>
+            <tr>
+                <td>Sunrise_Sunset</td>
+                <td>Shows if the sun was visible.</td>
+            </tr>
+            <tr>
+                <td>Civil_Twilight</td>
+                <td>Shows the civil twilight.</td>
+            </tr>
+            <tr>
+                <td>Nautical_Twilight</td>
+                <td>Shows the nautical twilight.</td>
+            </tr>
+            <tr>
+                <td>Astronomical_Twilight</td>
+                <td>Shows the astronomical twilight.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<div class="row my-grid-borders">
+    <div class="col-md-5 my-grid-borders">
+        <form method="post">
+            {{ form1.csrf_token }}
+            <input class="btn btn-success" type="submit" name="action" value="Expand">
+        </form>
+    </div>
+    <div class="col-md-5 my-grid-borders">
+        <form method="post">
+            {{ form2.csrf_token }}
+            <input class="btn btn-danger" type="submit" name="action" value="Collapse">
+        </form>
+    </div>
+    <div class="row my-grid-borders">
+        {{ raw_data_table | safe}}
+    </div>
+</div>
+
+    {% endblock %}
