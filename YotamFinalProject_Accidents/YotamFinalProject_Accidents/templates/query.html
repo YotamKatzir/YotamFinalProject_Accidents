@@ -3,10 +3,12 @@
 
 {% block content %}
 
+<h4>Choose a parameter you want to see and a pie chart that shows what's the severities of the different accidents which had this paramater will show!</h4>
+<h4>(The severity is in a scale of 1 to 4)</h4>
 <form method="post">
-    {{form.secpar.label}}
-    {{form.secpar}}
-    {{form.submit}}
+    {{ form.secpar.label }}
+    {{ form.secpar }}
+    {{ form.submit }}
 </form>
 
 <hr />
@@ -15,11 +17,9 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-8">
-        <img src={{ chart }} alt="not found">
-        {{raw_data_table}}
+        <img src={{ chart }} alt = "not found">
     </div>
 </div>
-
 <hr />
 
 {% endblock %}

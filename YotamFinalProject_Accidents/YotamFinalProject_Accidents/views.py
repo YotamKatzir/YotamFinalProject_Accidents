@@ -156,17 +156,17 @@ def query():
             plt.tight_layout()
             secpar = form.secpar.data
             df = pd.read_csv(path.join(path.dirname(__file__), 'static\\data\\US_Accidents_Dec19.csv'))
-            dfc= df.drop(['TMC','Start_Lat','Start_Lng','Distance\(mi)','Description','Number','Street','Side','City','County','State','Wind_Direction','Precipitation(in)','Weather_Condition', 'Sunrise_Sunset', 'Turning_Loop'], 1)
-            dfg=dfc[['Severity', secpar]]
-            dfg=dfg.groupby('Severity').sum()
+            dfc = df.drop(['TMC','Start_Lat','Start_Lng','Distance(mi)','Description','Number','Street','Side','City','County','State','Wind_Direction','Precipitation(in)','Weather_Condition', 'Sunrise_Sunset', 'Turning_Loop'], 1)
+            dfg = dfc[['Severity', secpar]]
+            dfg = dfg.groupby('Severity').sum()
             graph = dfg.plot.pie(subplots=True, ax = ax)
+            chart = plot_to_img(fig)
 
         return render_template('query.html',
             title='User Data Query',
             form = form,
-            img_under_construction = '/static/images/under_construction.png',
             chart = chart ,
-            height = "300" ,
-            width = "750",
+            height = "450" ,
+            width = "450",
             year=datetime.now().year
         )
