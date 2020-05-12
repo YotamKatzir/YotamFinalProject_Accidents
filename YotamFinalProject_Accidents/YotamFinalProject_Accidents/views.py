@@ -168,6 +168,5 @@ def query():
             chart = chart ,
             height = "300" ,
             width = "750",
-            data_table = dfg.to_html(classes = 'table table-hover'),
             year=datetime.now().year
         )
