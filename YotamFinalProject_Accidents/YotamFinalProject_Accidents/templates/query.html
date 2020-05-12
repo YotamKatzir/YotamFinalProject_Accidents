@@ -1,9 +1,25 @@
 ﻿{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+<form method="post">
+    {{form.secpar.label}}
+    {{form.secpar}}
+    {{form.submit}}
+</form>
 
+<hr />
+<div class="row">
+
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <img src={{ chart }} alt="not found">
+        {{raw_data_table}}
+    </div>
+</div>
+
+<hr />
 
 {% endblock %}

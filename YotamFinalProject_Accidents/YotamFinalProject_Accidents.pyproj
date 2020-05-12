@@ -35,6 +35,9 @@
     <Compile Include="YotamFinalProject_Accidents\Models\LocalDatabaseRoutines.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="YotamFinalProject_Accidents\Models\PlotServiceFunctions.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="YotamFinalProject_Accidents\Models\QueryFormStructure.py">
       <SubType>Code</SubType>
     </Compile>
@@ -86,6 +89,7 @@
     <Content Include="YotamFinalProject_Accidents\templates\login.html" />
     <Content Include="YotamFinalProject_Accidents\templates\query.html" />
     <Content Include="YotamFinalProject_Accidents\templates\AccidentsData.html" />
+    <Content Include="YotamFinalProject_Accidents\templates\NonLoginQuery.html" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="CondaEnv|CondaEnv|env" />
